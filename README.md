@@ -3,19 +3,46 @@
 My Tool Box of PowerShell helper functions.
 
 Functions included:
+
+**Statistics**
+- Measure-Frequency
+- Get-Variance
+- Get-StandardDeviation
+- Get-Permutation
+- Get-BinomialCoefficient
+- Get-Union
+- Get-TrimmedMean
+
+**Cryptography**
 - Invoke-CryptStringToBinary
 - Invoke-CryptBinaryToString
-- Measure-Frequency
+- Invoke-RepeatingKeyXOR
+- Invoke-FixedXOR
+- Invoke-Base64UrlDecode
+- Invoke-Base64UrlEncode
+
+**Math**
+- Get-Square
+- Get-RootMeanSquare
+- Get-LogGamma
+- Get-Gamma
+- ConvertTo-Radians
+- Get-Sine
+- Get-CartesianProduct
+- Test-IsPrime
+- Get-PrimeNumbers
+- Test-IsFactorion
+- Get-Factorial
+- Test-IsHarshadNumber
+- Test-IsPronicNumber
+
+**Misc**
 - Remove-Characters
 - Get-Entropy
 - ConvertTo-Bytes
-- Invoke-RepeatingKeyXOR
-- Invoke-FixedXOR
 - ConvertTo-BinaryString
 - ConvertTo-HexString
 - ConvertTo-StringArray
-- Get-Square
-- Get-RootMeanSquare
 - Test-PasswordStrength
 - New-Password
 - New-ComplexPassword
@@ -23,26 +50,7 @@ Functions included:
 - IsVowel
 - IsConsonant
 - Invoke-VerifyAndUpdatePasswordComplexity
-- Get-Variance
-- Get-StandardDeviation
-- Get-Permutation
-- Get-BinomialCoefficient
-- Get-LogGamma
-- Get-Gamma
-- ConvertTo-Radians
-- Get-Sine
-- Get-Union
 - Get-TypeName
-- Get-CartesianProduct
-- Test-IsPrime
-- Get-PrimeNumbers
-- Test-IsFactorion
-- Get-Factorial
-- Test-IsHarshadNumber
 - ConvertTo-Digits
-- Test-IsPronicNumber
-- Invoke-Base64UrlDecode
-- Invoke-Base64UrlEncode
-- Get-TrimmedMean
 - Measure-ScriptBlock
 - ConvertTo-ScriptBlock
