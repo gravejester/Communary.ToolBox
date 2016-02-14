@@ -10,7 +10,9 @@ Functions included:
 - Get-StandardDeviation
 - Get-Permutation
 - Get-Union
+- Get-Intersection
 - Get-TrimmedMean
+- Get-OverlapCoefficient
 
 **Cryptography**
 - Invoke-CryptStringToBinary
@@ -47,13 +49,11 @@ Functions included:
 - ConvertTo-StringArray
 - Test-PasswordStrength
 - New-Password
-- New-ComplexPassword
-- New-PronounceablePassword
-- IsVowel
-- IsConsonant
-- Invoke-VerifyAndUpdatePasswordComplexity
 - Get-TypeName
 - Measure-ScriptBlock
 - ConvertTo-ScriptBlock
 - Get-NGram
 - Get-Soundex
+- Get-LongestCommonSubstring
+- Get-LongestCommonSubsequence
+- Get-HammingDistance
