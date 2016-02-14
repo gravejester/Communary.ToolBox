@@ -9,7 +9,6 @@ Functions included:
 - Get-Variance
 - Get-StandardDeviation
 - Get-Permutation
-- Get-BinomialCoefficient
 - Get-Union
 - Get-TrimmedMean
 
@@ -26,7 +25,8 @@ Functions included:
 - Get-RootMeanSquare
 - Get-LogGamma
 - Get-Gamma
-- ConvertTo-Radians
+- ConvertTo-Radian
+- ConvertTo-Degree
 - Get-Sine
 - Get-CartesianProduct
 - Test-IsPrime
@@ -35,6 +35,8 @@ Functions included:
 - Get-Factorial
 - Test-IsHarshadNumber
 - Test-IsPronicNumber
+- Get-BinomialCoefficient
+- ConvertTo-Digits
 
 **Misc**
 - Remove-Characters
@@ -51,6 +53,7 @@ Functions included:
 - IsConsonant
 - Invoke-VerifyAndUpdatePasswordComplexity
 - Get-TypeName
-- ConvertTo-Digits
 - Measure-ScriptBlock
 - ConvertTo-ScriptBlock
+- Get-NGram
+- Get-Soundex
