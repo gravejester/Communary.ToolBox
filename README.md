@@ -54,6 +54,16 @@ Functions included:
 - ConvertTo-ScriptBlock
 - Get-NGram
 - Get-Soundex
+- Compare-Soundex
 - Get-LongestCommonSubstring
 - Get-LongestCommonSubsequence
 - Get-HammingDistance
+- Get-CommonPrefix
+- Get-CommonSuffix
+- Get-RatcliffObershelpSimilarity
+- Get-JaccardIndex
+- Get-JaccardDistance
+- Get-SorensenDiceCoefficient
+- Get-SorensenDiceDistance
+- Get-JaroWinklerDistance
+- Get-LevenshteinDistance
