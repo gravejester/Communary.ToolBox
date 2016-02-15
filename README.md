@@ -39,6 +39,10 @@ Functions included:
 - Test-IsPronicNumber
 - Get-BinomialCoefficient
 - ConvertTo-Digits
+- Get-GreatestCommonDivisor
+- Get-LeastCommonMultiple
+- Test-IsEven
+- Test-IsOdd
 
 **Misc**
 - Remove-Characters
