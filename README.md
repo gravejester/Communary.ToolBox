@@ -43,6 +43,8 @@ Functions included:
 - Get-LeastCommonMultiple
 - Test-IsEven
 - Test-IsOdd
+- Get-Divisors
+- Test-IsPerfectNumber
 
 **Misc**
 - Remove-Characters
