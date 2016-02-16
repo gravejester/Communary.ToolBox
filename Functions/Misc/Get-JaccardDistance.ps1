@@ -10,6 +10,8 @@ function Get-JaccardDistance {
             Get-JaccardDistance 'karolin' 'kharolin'
         .LINK
             http://en.wikipedia.org/wiki/Jaccard_index
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 03.11.2014

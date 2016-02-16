@@ -15,7 +15,8 @@ function Get-RatcliffObershelpSimilarity {
             Get-RatcliffObershelpSimilarity -String1 'Pennsylvania' -String2 'Pencilvaneya'
         .LINK
             http://collaboration.cmc.ec.gc.ca/science/rpn/biblio/ddj/Website/articles/DDJ/1988/8807/8807c/8807c.htm
-            https://github.com/gravejester/PASM
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 05.11.2014

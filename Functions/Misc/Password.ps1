@@ -15,6 +15,7 @@ function Test-PasswordStrength {
             System.String
         .LINK
             https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
     #>
     [CmdletBinding()]
     param (
@@ -444,6 +445,7 @@ function New-Password {
             System.Security.SecureString
         .LINK
             https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
     #>
     [CmdletBinding(DefaultParameterSetName = 'FixedLength')]
     param (

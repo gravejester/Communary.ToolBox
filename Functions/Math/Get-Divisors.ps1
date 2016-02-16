@@ -1,4 +1,6 @@
 function Get-Divisors {
+    # https://communary.wordpress.com/
+    # https://github.com/gravejester/Communary.ToolBox
     # Get-Divisors 6
     # Get-Divisors 28 | Sort-Object
     [CmdletBinding()]

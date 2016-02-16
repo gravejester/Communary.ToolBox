@@ -8,7 +8,8 @@ function Compare-Soundex {
             Compare-Soundex 'Johnny' 'Jonny'
             Will return True
         .LINK
-            https://github.com/gravejester/PASM
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .INPUTS
             System.String
         .OUTPUTS

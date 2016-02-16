@@ -1,5 +1,7 @@
 function Test-IsPerfectNumber {
     # https://en.wikipedia.org/wiki/Perfect_number
+    # https://communary.wordpress.com/
+    # https://github.com/gravejester/Communary.ToolBox
     # Test-IsPerfectNumber 8128
     # 496 | Test-IsPerfectNumber
     [CmdletBinding()]

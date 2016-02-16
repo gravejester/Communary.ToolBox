@@ -12,8 +12,8 @@ function Get-NGram {
             Get-NGram 'Cys-Gly-Leu-Ser-Trp' 4 -Separator '-'
         .LINK
             http://en.wikipedia.org/wiki/N-gram
-        .LINK
-            https://github.com/gravejester/PASM
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .INPUTS
             System.String
         .OUTPUTS

@@ -1,5 +1,7 @@
 function Invoke-RepeatingKeyXOR {
     # http://cryptopals.com/sets/1/challenges/5/
+    # https://communary.wordpress.com/
+    # https://github.com/gravejester/Communary.ToolBox
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]

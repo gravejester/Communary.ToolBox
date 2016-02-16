@@ -6,6 +6,9 @@ function Get-SorensenDiceDistance {
             Uses the Sorensen Dice Coefficient to calculate the distance between two strings.
         .EXAMPLE
             Get-SorensenDiceDistance -String1 'night' -String2 'nacht'
+        .LINK
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 03.11.2014

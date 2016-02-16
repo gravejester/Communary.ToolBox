@@ -16,6 +16,9 @@ function Measure-ScriptBlock {
             Run an array of script blocks 10 times, formatting the output in a table.
         .OUTPUTS
             System.Management.Automation.PSCustomObject
+        .LINKS
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 28.10.2014

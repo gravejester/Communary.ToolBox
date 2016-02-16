@@ -20,6 +20,7 @@ function Remove-Characters {
             System.String
         .LINK
             https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             This code was translated and adapted from this StackOverflow answer: http://stackoverflow.com/a/1120407/3940558
             Author: Øyvind Kallstad

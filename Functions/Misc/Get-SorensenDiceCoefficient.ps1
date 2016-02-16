@@ -8,6 +8,8 @@ function Get-SorensenDiceCoefficient {
             Get-SorensenDiceCoefficient -String1 'night' -String2 'night'
         .LINK
             http://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 03.11.2014

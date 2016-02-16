@@ -2,6 +2,9 @@ function Invoke-Base64UrlDecode {
     <#
         .SYNOPSIS
         .DESCRIPTION
+        .LINK
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             http://blog.securevideo.com/2013/06/04/implementing-json-web-tokens-in-net-with-a-base-64-url-encoded-key/
             Author: Øyvind Kallstad

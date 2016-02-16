@@ -9,7 +9,8 @@ function Get-JaccardIndex {
             Get-JaccardIndex 'karolin' 'kharolin'
         .LINK
             http://en.wikipedia.org/wiki/Jaccard_index
-            https://github.com/gravejester/PASM
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 03.11.2014

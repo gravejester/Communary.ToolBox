@@ -10,6 +10,8 @@ function Get-Soundex {
             Get-Soundex 'Tymczak'
         .LINK
             http://en.wikipedia.org/wiki/Soundex
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 03.11.2014

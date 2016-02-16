@@ -7,6 +7,9 @@ function ConvertTo-ScriptBlock{
         .EXAMPLE
             Get-Content '.\scriptFile.ps1' -raw | ConvertTo-ScriptBlock
             Converts a script file to a ScriptBlock.
+        .LINK
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 13.03.2014

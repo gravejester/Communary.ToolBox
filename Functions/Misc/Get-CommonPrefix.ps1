@@ -1,4 +1,6 @@
 function Get-CommonPrefix {
+    # https://communary.wordpress.com/
+    # https://github.com/gravejester/Communary.ToolBox
     [CmdletBinding()]
     param( 
         [Parameter(Position = 0)]

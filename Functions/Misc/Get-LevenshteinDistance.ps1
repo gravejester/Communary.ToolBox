@@ -8,8 +8,9 @@ function Get-LevenshteinDistance {
             Get-LevenshteinDistance -Source 'kitten' -Target 'sitting'
         .LINK
             http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#C.23
-            https://github.com/gravejester/PASM
             http://en.wikipedia.org/wiki/Edit_distance
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Author: Øyvind Kallstad
             Date: 07.11.2014

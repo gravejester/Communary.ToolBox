@@ -1,4 +1,6 @@
 function ConvertTo-Degree {
+    # https://communary.wordpress.com/
+    # https://github.com/gravejester/Communary.ToolBox
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true, Position = 0)]

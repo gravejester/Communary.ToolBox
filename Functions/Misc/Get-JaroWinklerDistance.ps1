@@ -16,8 +16,9 @@ function Get-JaroWinklerDistance {
             This will get the normalized Jaro-Winkler Distance between the two strings.
         .LINK
             http://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance
-            https://github.com/gravejester/PASM
             http://stackoverflow.com/questions/19123506/jaro-winkler-distance-algorithm-in-c-sharp
+            https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
         .NOTES
             Adapted from code by leebickmtu posted to http://stackoverflow.com/questions/19123506/jaro-winkler-distance-algorithm-in-c-sharp
             Author: Øyvind Kallstad

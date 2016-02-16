@@ -1,6 +1,8 @@
 function Get-GreatestCommonDivisor {
     # https://en.wikipedia.org/wiki/Euclidean_algorithm
     # https://en.wikipedia.org/wiki/Binary_GCD_algorithm
+    # https://communary.wordpress.com/
+    # https://github.com/gravejester/Communary.ToolBox
     # Get-GreatestCommonDivisor 1160718174 316258250 -Method Euclidean
     # Get-GreatestCommonDivisor 1160718174 316258250 -Method Stein
     [CmdletBinding()]

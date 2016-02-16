@@ -76,10 +76,9 @@ function Invoke-CryptStringToBinary {
             Version: 1.0
         .LINK
             https://www.sysadmins.lv/blog-en/convert-data-between-binary-hex-and-base64-in-powershell.aspx
-        .LINK
             https://msdn.microsoft.com/en-us/library/windows/desktop/aa380285(v=vs.85).aspx
-        .LINK
             https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
     #>
     [CmdletBinding()]
     param (
@@ -130,10 +129,9 @@ function Invoke-CryptBinaryToString {
             Version: 1.0
         .LINK
             https://www.sysadmins.lv/blog-en/convert-data-between-binary-hex-and-base64-in-powershell.aspx
-        .LINK
             https://msdn.microsoft.com/en-us/library/windows/desktop/aa379887(v=vs.85).aspx
-        .LINK
             https://communary.wordpress.com/
+            https://github.com/gravejester/Communary.ToolBox
     #>
     [CmdletBinding()]
     param (
