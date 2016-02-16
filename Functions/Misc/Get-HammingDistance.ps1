@@ -9,11 +9,15 @@ function Get-HammingDistance {
             transformed one string into the other. Note! Even though the original Hamming algorithm only works for
             strings of equal length, this function supports strings of unequal length as well.
 
-            The function also calculates the Hamming distance between two positive integer by
-            using binary operations.
+            The function also calculates the Hamming distance between two positive integers (considered as binary
+            values); that is, it calculates the number of bit substitutions required to change one integer into
+            the other.
         .EXAMPLE
             Get-HammingDistance 'karolin' 'kathrin'
             Calculate the Hamming distance between the two strings. The result is 3.
+        .EXAMPLE
+            Get-HammingDistance 'karolin' 'kathrin' -NormalizedOutput
+            Calculate the normalized Hamming distance between the two strings. The result is 0.571428571428571.
         .EXAMPLE
             Get-HammingDistance -Int1 61 -Int2 15
             Calculate the hamming distance between 61 and 15. The result is 3.
