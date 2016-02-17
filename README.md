@@ -73,3 +73,4 @@ Functions included:
 - Get-SorensenDiceDistance
 - Get-JaroWinklerDistance
 - Get-LevenshteinDistance
+- Show-BinaryFile
