@@ -24,10 +24,10 @@ function Get-Intersection {
     [OutputType([System.Array])]
     [CmdletBinding()]
     param (
-        [Parameter(Position = 0, Mandatory)]
+        [Parameter(Position = 0, Mandatory = $true)]
         $Set1,
 
-        [Parameter(Position = 1, Mandatory)]
+        [Parameter(Position = 1, Mandatory = $true)]
         $Set2,
 
         # Makes string intersection case sensitive.

@@ -3,10 +3,14 @@ function Get-JaccardIndex {
         .SYNOPSIS
             Get the Jaccard Index of two strings.
         .DESCRIPTION
-            The Jaccard index measures similarity between finite sample sets, and is defined as the size of the 
-            intersection divided by the size of the union of the sample sets.
+            The Jaccard index, also known as the Jaccard similarity coefficient, measures similarity between finite sample sets, 
+            and is defined as the size of the intersection divided by the size of the union of the sample sets.
         .EXAMPLE
             Get-JaccardIndex 'karolin' 'kharolin'
+            Calculate the Jaccard Index for the two strings. The output should be 0.875
+        .EXAMPLE
+            Get-JaccardIndex (1,2,4) (2,4,6)
+            Calculate the Jaccard Index for the two sets. The output should be 0.5
         .LINK
             http://en.wikipedia.org/wiki/Jaccard_index
             https://communary.wordpress.com/
@@ -19,29 +23,43 @@ function Get-JaccardIndex {
     #>
     [CmdletBinding()]
     param (
-        [Parameter(Position = 0, Mandatory)]
+        [Parameter(Position = 0, Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [string] $String1,
+        $a,
  
-        [Parameter(Position = 1, Mandatory)]
+        [Parameter(Position = 1, Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [string] $String2,
+        $b,
  
         # Makes matches case-sensitive. By default, matches are not case-sensitive.
+        # This parameter is only applicable if the input are strings.
         [Parameter()]
         [switch] $CaseSensitive
     )
  
     try {
-        # handle case insensitivity
-        if (-not($CaseSensitive)) {
-            $String1 = $String1.ToLowerInvariant()
-            $String2 = $String2.ToLowerInvariant()
+        # verify both inputs are the same type
+        if (-not ($a.GetType().Name -eq $b.GetType().Name)) {
+            Write-Warning 'Both inputs need to be of the same type.'
+            break
         }
- 
+        
+        if ($a.GetType().Name -eq 'String') {
+            if (-not($CaseSensitive)) {
+                $a = $a.ToLower()
+                $b = $b.ToLower()
+            }
+            $aArray = $a.ToCharArray()
+            $bArray = $b.ToCharArray()
+        }
+        else {
+            $aArray = $a
+            $bArray = $b
+        }
+        
         # get intersection size and union size of both strings
-        $intersectionSize = (Get-Intersection $String1 $String2 -CaseSensitive:$CaseSensitive).Length
-        $unionSize = (Get-Union $String1 $String2 -CaseSensitive:$CaseSensitive).Length
+        $intersectionSize = (Get-Intersection $aArray $bArray -CaseSensitive:$CaseSensitive).Length
+        $unionSize = (Get-Union $aArray $bArray -CaseSensitive:$CaseSensitive).Length
  
         # calculate jaccard index by dividing union size with intersection size
         Write-Output ($intersectionSize / $unionSize)

@@ -22,11 +22,11 @@ function Get-JaccardDistance {
     param (
         [Parameter(Position = 0, Mandatory)]
         [ValidateNotNullOrEmpty()]
-        [string] $String1,
+        $a,
  
         [Parameter(Position = 1, Mandatory)]
         [ValidateNotNullOrEmpty()]
-        [string] $String2,
+        $b,
  
         # Makes matches case-sensitive. By default, matches are not case-sensitive.
         [Parameter()]
@@ -34,14 +34,8 @@ function Get-JaccardDistance {
     )
  
     try {
-        # handle case insensitivity
-        if (-not($CaseSensitive)) {
-            $String1 = $String1.ToLowerInvariant()
-            $String2 = $String2.ToLowerInvariant()
-        }
-        
         # calculate the jaccard distance
-        $jaccardDistance = 1 - (Get-JaccardIndex -String1 $String1 -String2 $String2 -CaseSensitive:$CaseSensitive)
+        $jaccardDistance = 1 - (Get-JaccardIndex $a $b -CaseSensitive:$CaseSensitive)
         Write-Output $jaccardDistance
     }
  
