@@ -14,6 +14,9 @@ function Get-Union {
             http://en.wikipedia.org/wiki/Union_%28set_theory%29
             https://communary.wordpress.com/
             https://github.com/gravejester/Communary.ToolBox
+        .INPUTS
+            System.Array
+            System.String
         .NOTES
             Author: Øyvind Kallstad
             Date: 21.05.2015

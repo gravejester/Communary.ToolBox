@@ -15,6 +15,9 @@ function Get-Intersection {
             https://en.wikipedia.org/wiki/Intersection_(set_theory)
             https://communary.wordpress.com/
             https://github.com/gravejester/Communary.ToolBox
+        .INPUTS
+            System.Array
+            System.String
         .NOTES
             Author: Øyvind Kallstad
             Date: 14.02.2016
