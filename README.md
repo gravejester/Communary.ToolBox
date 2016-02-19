@@ -74,3 +74,6 @@ Functions included:
 - Get-JaroWinklerDistance
 - Get-LevenshteinDistance
 - Show-BinaryFile
+- Get-LuhnChecksum
+- New-LuhnChecksumDigit
+- Test-IsLuhnValid
