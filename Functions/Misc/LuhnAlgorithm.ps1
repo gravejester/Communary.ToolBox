@@ -29,31 +29,25 @@ function Get-LuhnChecksum {
         [uint64] $Number
     )
 
-    # convert the number into an array of its individual digits
-    # and reverse the array
     $digitsArray = ConvertTo-Digits -Number $Number
     [array]::Reverse($digitsArray)
 
     $sum = 0
-    
-    # sum every other digit starting with position 0
-    for ($i = 0; $i -le ($digitsArray.Count - 1); $i = $i + 2) {
-        $sum += $digitsArray[$i]
-    }
+    $index = 0
 
-    # double every other digit starting with position 1
-    for ($i = 1; $i -le ($digitsArray.Count - 1); $i = $i + 2) {
-        $doubledDigit = $digitsArray[$i] * 2
-        if (-not ($doubledDigit -eq 0)) {
-            # if the product of this operation is larger than 9 we need to sum the individual digits of this number as well
-            $doubleDigitArray = ConvertTo-Digits -Number $doubledDigit
-            $doubleDigitArraySum = $doubleDigitArray | Measure-Object -Sum | Select-Object -ExpandProperty Sum
-            # and add it to the total sum
-            $sum += $doubleDigitArraySum
+    foreach ($digit in $digitsArray) {
+        if (($index % 2) -eq 0) {
+            $doubledDigit = $digit * 2
+            if (-not($doubledDigit -eq 0)) {
+                $doubleDigitArray = ConvertTo-Digits -Number $doubledDigit
+                $sum += ($doubleDigitArray | Measure-Object -Sum | Select-Object -ExpandProperty Sum)
+            }
         }
+        else {
+            $sum += $digit
+        }
+        $index++
     }
-
-    # this calculated sum is the Luhn checksum
     Write-Output $sum
 }
 
@@ -73,7 +67,7 @@ function New-LuhnChecksumDigit {
             Author: Øyvind Kallstad
             Date: 19.02.2016
             Version: 1.0
-            Dependencies: Get-LuhnCheckSum, ConvertTo-Digits
+            Dependencies: Get-LuhnCheckSum
         .LINKS
             https://en.wikipedia.org/wiki/Luhn_algorithm
             https://communary.wordpress.com/
@@ -86,8 +80,7 @@ function New-LuhnChecksumDigit {
     )
 
     $checksum = Get-LuhnCheckSum -Number $PartialNumber
-    $checksumArray = ConvertTo-Digits -Number $checksum
-    Write-Output (10 - $checksumArray[-1])
+    Write-Output (($checksum * 9) % 10)
 }
 
 function Test-IsLuhnValid {
@@ -98,7 +91,7 @@ function Test-IsLuhnValid {
             This function uses the Luhn algorithm to validate a number that includes
             the Luhn checksum digit.
         .EXAMPLE
-            Test-IsLuhnValid -PartialNumber 1234567890123452
+            Test-IsLuhnValid -Number 1234567890123452
             This will validate whether the number is valid according to the Luhn Algorithm.
         .INPUTS
             System.UInt64
@@ -119,9 +112,13 @@ function Test-IsLuhnValid {
         [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
         [uint64] $Number
     )
-    $checksum = Get-LuhnCheckSum -Number $Number
-    $checksumArray = ConvertTo-Digits -Number $checksum
-    if ($checksumArray[-1] -eq 0) {
+
+    $numberDigits = ConvertTo-Digits -Number $Number
+    $checksumDigit = $numberDigits[-1]
+    $numberWithoutChecksumDigit = $numberDigits[0..($numberDigits.Count - 2)] -join ''
+    $checksum = Get-LuhnCheckSum -Number $numberWithoutChecksumDigit
+
+    if ((($checksum + $checksumDigit) % 10) -eq 0) {
         Write-Output $true
     }
     else {
