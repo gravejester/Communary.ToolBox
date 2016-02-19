@@ -77,3 +77,8 @@ Functions included:
 - Get-LuhnChecksum
 - New-LuhnChecksumDigit
 - Test-IsLuhnValid
+- Convert-Temperature
+- Start-Timer
+- Stop-Timer
+- Test-Function
+- Show-Calendar
