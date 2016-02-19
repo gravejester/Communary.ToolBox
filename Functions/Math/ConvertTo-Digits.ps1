@@ -7,7 +7,7 @@ function ConvertTo-Digits {
         .EXAMPLE
             ConvertTo-Digits 145
         .INPUTS
-            System.Int32
+            System.UInt64
         .LINK
             https://communary.wordpress.com/
             https://github.com/gravejester/Communary.ToolBox
@@ -20,11 +20,10 @@ function ConvertTo-Digits {
     [CmdletBinding()]
     param(
         [Parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true)]
-        [ValidateRange(1, [int]::MaxValue)]
-        [int]$Number
+        [uint64]$Number
     )
     $n = $Number
-    $numberOfDigits = 1 + [convert]::ToInt32([math]::Floor(([math]::Log10($n))))
+    $numberOfDigits = 1 + [convert]::ToUInt64([math]::Floor(([math]::Log10($n))))
     $digits = New-Object Byte[] $numberOfDigits
     for ($i = ($numberOfDigits - 1); $i -ge 0; $i--) {
         $digit = $n % 10
