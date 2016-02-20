@@ -82,3 +82,5 @@ Functions included:
 - Stop-Timer
 - Test-Function
 - Show-Calendar
+- Get-ContentPaginated
+- Trace-Route
