@@ -44,8 +44,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round((($Value + 273.15) * (9/5)), $Decimals)
                 Delisle = [math]::Round(((100 - $Value) * (3/2)), $Decimals)
                 Newton = [math]::Round(($Value * (33/100)), $Decimals)
-                Réaumur = [math]::Round(($Value * (4/5)), $Decimals)
-                Rømer = [math]::Round(($Value * (21/40) + 7.5), $Decimals)
+                'Réaumur' = [math]::Round(($Value * (4/5)), $Decimals)
+                'Rømer' = [math]::Round(($Value * (21/40) + 7.5), $Decimals)
             });break
         }
         'Fahrenheit' {
@@ -56,8 +56,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round(($Value + 459.67), $Decimals)
                 Delisle = [math]::Round(((212 - $Value) * (5/6)), $Decimals)
                 Newton = [math]::Round((($Value - 32) * (11/60)), $Decimals)
-                Réaumur = [math]::Round((($Value - 32) * (4/9)), $Decimals)
-                Rømer = [math]::Round((($Value - 32) * (7/24) + 7.5), $Decimals)
+                'Réaumur' = [math]::Round((($Value - 32) * (4/9)), $Decimals)
+                'Rømer' = [math]::Round((($Value - 32) * (7/24) + 7.5), $Decimals)
             });break
         }
         'Kelvin' {
@@ -68,8 +68,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round(($Value * (9/5)), $Decimals)
                 Delisle = [math]::Round(((373.15 - $Value) * (3/2)), $Decimals)
                 Newton = [math]::Round((($Value - 273.15) * (33/100)), $Decimals)
-                Réaumur = [math]::Round((($Value - 273.15) * (4/5)), $Decimals)
-                Rømer = [math]::Round((($Value - 273.15) * (21/40) + 7.5), $Decimals)
+                'Réaumur' = [math]::Round((($Value - 273.15) * (4/5)), $Decimals)
+                'Rømer' = [math]::Round((($Value - 273.15) * (21/40) + 7.5), $Decimals)
             });break
         }
         'Rankine' {
@@ -80,8 +80,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round($Value, $Decimals)
                 Delisle = [math]::Round(((671.67 - $Value) * (5/6)), $Decimals)
                 Newton = [math]::Round((($Value - 491.67) * (11/60)), $Decimals)
-                Réaumur = [math]::Round((($Value - 491.67) * (4/9)), $Decimals)
-                Rømer = [math]::Round((($Value - 491.67) * (7/24) + 7.5), $Decimals)
+                'Réaumur' = [math]::Round((($Value - 491.67) * (4/9)), $Decimals)
+                'Rømer' = [math]::Round((($Value - 491.67) * (7/24) + 7.5), $Decimals)
             });break
         }
         'Delisle' {
@@ -92,8 +92,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round((671.67 - $Value * (6/5)), $Decimals)
                 Delisle = [math]::Round($Value, $Decimals)
                 Newton = [math]::Round((33 - $Value * (11/50)), $Decimals)
-                Réaumur = [math]::Round((80 - $Value * (8/15)), $Decimals)
-                Rømer = [math]::Round((60 - $Value * (7/20)), $Decimals)
+                'Réaumur' = [math]::Round((80 - $Value * (8/15)), $Decimals)
+                'Rømer' = [math]::Round((60 - $Value * (7/20)), $Decimals)
             });break
         }
         'Newton' {
@@ -104,8 +104,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round(($Value * (60/11) + 491.67), $Decimals)
                 Delisle = [math]::Round(((33 - $Value) * (50/11)), $Decimals)
                 Newton = [math]::Round($Value, $Decimals)
-                Réaumur = [math]::Round(($Value * (80/33)), $Decimals)
-                Rømer = [math]::Round(($Value * (35/22) + 7.5), $Decimals)
+                'Réaumur' = [math]::Round(($Value * (80/33)), $Decimals)
+                'Rømer' = [math]::Round(($Value * (35/22) + 7.5), $Decimals)
             });break
         }
         'Réaumur' {
@@ -116,8 +116,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round(($Value * (9/4) + 491.67), $Decimals)
                 Delisle = [math]::Round(((80 - $Value) * (15/8)), $Decimals)
                 Newton = [math]::Round(($Value * (33/80)), $Decimals)
-                Réaumur = [math]::Round($Value, $Decimals)
-                Rømer = [math]::Round(($Value * (21/32) + 7.5), $Decimals)
+                'Réaumur' = [math]::Round($Value, $Decimals)
+                'Rømer' = [math]::Round(($Value * (21/32) + 7.5), $Decimals)
             });break
         }
         'Rømer' {
@@ -128,8 +128,8 @@ function Convert-Temperature {
                 Rankine = [math]::Round((($Value - 7.5) * (24/7) + 491.67), $Decimals)
                 Delisle = [math]::Round(((60 - $Value) * (20/7)), $Decimals)
                 Newton = [math]::Round((($Value - 7.5) * (22/35)), $Decimals)
-                Réaumur = [math]::Round((($Value - 7.5) * (32/21)), $Decimals)
-                Rømer = [math]::Round($Value, $Decimals)
+                'Réaumur' = [math]::Round((($Value - 7.5) * (32/21)), $Decimals)
+                'Rømer' = [math]::Round($Value, $Decimals)
             });break
         }
     }
