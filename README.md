@@ -12,7 +12,6 @@ Functions included:
 - Get-Union
 - Get-Intersection
 - Get-TrimmedMean
-- Get-OverlapCoefficient
 
 **Cryptography**
 - Invoke-CryptStringToBinary
